@@ -13,8 +13,9 @@ npm install untreeize
 
 ## Usage
 
+Non-curried version, `untreeize`.
 ```js
-var untreeize = require('untreeize');
+var untreeize = require('untreeize').untreeize;
 
 var tree = {
 	a: 1,
@@ -38,6 +39,7 @@ var tree = {
 
 var flattened = untreeize(tree);
 
+// flatten is equal to the following
 flattened == [
 	{
 		a: 1,
@@ -66,6 +68,46 @@ flattened == [
 		'cs:zs:r': 13,
 		'cs:zs:s': 14,
 		'cs:zs:t': 15
+	}
+];
+```
+
+Curried version, untreeizeCurried (curried via [Ramda](http://ramdajs.com/)).
+
+```js
+var untreeize = require('untreeize').untreeizeCurried;
+var flattenUsingDotDelimiter = untreeize({delimiter: '.'})
+var flattened = flattenUsingDotDelimiter(tree);
+
+// flatten is equal to the following
+flattened == [
+	{
+		a: 1,
+		'cs.x': 2,
+		'cs.zs.r': 3,
+		'cs.zs.s': 4,
+		'cs.zs.t': 5
+	},
+	{
+		a: 1,
+		'cs.x': 2,
+		'cs.zs.r': 6,
+		'cs.zs.s': 7,
+		'cs.zs.t': 8
+	},
+	{
+		a: 1,
+		'cs.x': 9,
+		'cs.zs.r': 10,
+		'cs.zs.s': 11,
+		'cs.zs.t': 12
+	},
+	{
+		a: 1,
+		'cs.x': 9,
+		'cs.zs.r': 13,
+		'cs.zs.s': 14,
+		'cs.zs.t': 15
 	}
 ];
 
