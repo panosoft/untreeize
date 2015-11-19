@@ -1,0 +1,28 @@
+{
+  "name": "untreeize",
+  "version": "0.0.0",
+  "description": "Reverse treeize",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "patch": "npm version patch && git push --follow-tags && npm publish",
+    "minor": "npm version minor && git push --follow-tags && npm publish"
+  },
+  "keywords": [
+    "treeize",
+    "reverse"
+  ],
+  "author": "Charles Scalfani",
+  "license": "MIT",
+  "dependencies": {
+    "is_js": "^0.7.4",
+    "ramda": "^0.18.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0"
+  }
+}
