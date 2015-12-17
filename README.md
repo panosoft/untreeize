@@ -121,7 +121,7 @@ flattened == [
 
 ---
 
-<a name="untreeize"/>
+<a name="untreeize"></a>
 ### untreeize ( tree [, options] )
 
 This will flatten hierarchical data.
@@ -134,7 +134,7 @@ __Arguments__
 - `options` - options object optionally containing the following keys
 	+ `delimiter` - define delimiter between keys (defaults to ':' )
 
-<a name="untreeizeCurried"/>
+<a name="untreeizeCurried"></a>
 ### untreeizeCurried ( options, tree )
 
 Same as [`untreeize`](#untreeize) but Curried and with `tree` as the last parameter.
