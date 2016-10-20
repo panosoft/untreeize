@@ -1,6 +1,6 @@
 {
   "name": "untreeize",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Reverse treeize",
   "main": "lib/index.js",
   "directories": {
